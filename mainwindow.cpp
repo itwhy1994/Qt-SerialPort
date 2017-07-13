@@ -8,15 +8,18 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     //find usable serialport
-    foreach(const QSerialPortInfo &info, QSerialPortInfo::availablePorts())
+    QSerialPortInfo serialinfo;
+    QList<QSerialPortInfo> infos = serialinfo.availablePorts();
+
+    //QList<QSerialPortInfo> infos = QSerialPortInfo::availablePorts();
+    while (infos.empty())
     {
-        QSerialPort tmpserial;
-        tmpserial.setPort(info);
-        if (tmpserial.open(QIODevice::ReadWrite))
-        {
-            ui->PortBox->addItem(serial->portName());
-            serial->close();
-        }
+        ui->PortBox->addItem("None");
+        infos = serialinfo.availablePorts();
+    }
+    foreach(QSerialPortInfo info, infos)
+    {
+        ui->PortBox->addItem(info.portName());
     }
 
     //setup baudrate menu display
@@ -40,6 +43,7 @@ void MainWindow::on_clearButton_clicked()
 void MainWindow::on_sendButton_clicked()
 {
     serial->write(ui->textEdit_2->toPlainText().toLatin1());
+    serial->write("\n");
 }
 
 void MainWindow::on_openButton_clicked()
