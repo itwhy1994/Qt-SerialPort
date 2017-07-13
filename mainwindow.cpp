@@ -12,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QList<QSerialPortInfo> infos = serialinfo.availablePorts();
 
     //QList<QSerialPortInfo> infos = QSerialPortInfo::availablePorts();
-    while (infos.empty())
+    if (infos.empty())
     {
         ui->PortBox->addItem("None");
         infos = serialinfo.availablePorts();
