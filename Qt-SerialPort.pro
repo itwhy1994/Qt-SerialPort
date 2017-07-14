@@ -30,3 +30,6 @@ SOURCES += main.cpp\
 HEADERS  += mainwindow.h
 
 FORMS    += mainwindow.ui
+
+#Change logo
+RC_ICONS += com.ico

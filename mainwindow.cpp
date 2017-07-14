@@ -22,8 +22,11 @@ MainWindow::MainWindow(QWidget *parent) :
         ui->PortBox->addItem(info.portName());
     }
 
-    //setup baudrate menu display
-    ui->BaudBox->setCurrentIndex(3);
+    //setup menu display
+    ui->BaudBox->setCurrentIndex(10); // 默认显示第10项
+    ui->BitNumBox->setCurrentIndex(3); // 默认显示第3项
+    ui->ParityBox->setCurrentIndex(0); // 默认显示第0项
+    ui->StopBox->setCurrentIndex(0); // 默认显示第0项
 
     //turn on sendButton
     ui->sendButton->setEnabled(true);
@@ -118,7 +121,6 @@ void MainWindow::on_openButton_clicked()
         // 关闭串口
         serial->clear();
         serial->close();
-        serial->deleteLater();
 
         // 打开参数选择使能
         ui->PortBox->setEnabled(true);
