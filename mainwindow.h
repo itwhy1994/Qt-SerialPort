@@ -5,6 +5,7 @@
 #include <QtSerialPort/QSerialPort>
 #include <QtSerialPort/QSerialPortInfo>
 #include <string>
+#include <QTextCodec>
 
 namespace Ui {
 class MainWindow;

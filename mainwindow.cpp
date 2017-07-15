@@ -139,8 +139,9 @@ void MainWindow::Read_Data()
     buf = serial->readAll();
     if (!buf.isEmpty())
     {
-        QString str = tr(buf);
-        ui->textEdit->append(str);
+        QString qstr = QString::fromLocal8Bit(buf);
+        ui->textEdit->append(qstr);
+        //ui->textEdit->append(buf.toHex()); //16进制输出
     }
     buf.clear();
 }
