@@ -37,6 +37,7 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
 void MainWindow::on_clearButton_clicked()
 {
     ui->textEdit->clear();
@@ -139,7 +140,7 @@ void MainWindow::Read_Data()
     buf = serial->readAll();
     if (!buf.isEmpty())
     {
-        QString qstr = QString::fromLocal8Bit(buf);
+        QString qstr = buf;
         ui->textEdit->append(qstr);
         //ui->textEdit->append(buf.toHex()); //16进制输出
     }
