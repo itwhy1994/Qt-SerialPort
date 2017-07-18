@@ -26,49 +26,7 @@
   <widget class="QWidget" name="centralWidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="6,1">
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,16,1,1,8,1">
-        <item>
-         <widget class="QLabel" name="label_9">
-          <property name="text">
-           <string>接收窗口</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QTextEdit" name="textEdit">
-          <property name="tabStopWidth">
-           <number>80</number>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="clearButton">
-          <property name="text">
-           <string>清空接收</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_10">
-          <property name="text">
-           <string>发送窗口</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QTextEdit" name="textEdit_2"/>
-        </item>
-        <item>
-         <widget class="QPushButton" name="sendButton">
-          <property name="text">
-           <string>发送数据</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
+     <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="0,0">
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_5">
         <item>
@@ -269,6 +227,48 @@
            </size>
           </property>
          </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,16,1,1,8,1">
+        <item>
+         <widget class="QLabel" name="label_9">
+          <property name="text">
+           <string>接收窗口</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="textEdit">
+          <property name="tabStopWidth">
+           <number>80</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="clearButton">
+          <property name="text">
+           <string>清空接收</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_10">
+          <property name="text">
+           <string>发送窗口</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="textEdit_2"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="sendButton">
+          <property name="text">
+           <string>发送数据</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
