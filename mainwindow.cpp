@@ -40,7 +40,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_clearButton_clicked()
 {
-    ui->textEdit->clear();
+    ui->textBrowser->clear();
     ui->textEdit_2->clear();
 }
 
@@ -140,9 +140,9 @@ void MainWindow::Read_Data()
     buf = serial->readAll();
     if (!buf.isEmpty())
     {
-        QString qstr = buf;
-        ui->textEdit->append(qstr);
-        //ui->textEdit->append(buf.toHex()); //16进制输出
+        QString qstr = QString(buf);
+        ui->textBrowser->setText(ui->textBrowser->toPlainText()+qstr);
+        //ui->textBrowser->append(buf.toHex()); //16进制输出
     }
     buf.clear();
 }

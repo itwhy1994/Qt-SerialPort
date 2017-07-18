@@ -231,7 +231,7 @@
        </layout>
       </item>
       <item>
-       <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,16,1,1,8,1">
+       <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,20,1,1,8,1">
         <item>
          <widget class="QLabel" name="label_9">
           <property name="text">
@@ -240,7 +240,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QTextEdit" name="textEdit">
+         <widget class="QTextBrowser" name="textBrowser">
           <property name="tabStopWidth">
            <number>80</number>
           </property>
